@@ -12,8 +12,7 @@ public class ServerThread extends Thread{
     public void run() {
         try (BufferedReader r = new BufferedReader(new InputStreamReader(client.getInputStream()));
              BufferedWriter w = new BufferedWriter(new OutputStreamWriter(client.getOutputStream()))) {
-            w.write("hello Sir!");
-            w.flush();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
